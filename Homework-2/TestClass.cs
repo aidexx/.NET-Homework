@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Homework_2
 {
-    class TestClass
+    public class TestClass
     {
 
         /// <summary>
