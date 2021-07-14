@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Text;
 
 namespace Homework_2
 {
@@ -14,7 +10,7 @@ namespace Homework_2
         /// considering that it increases periodically.
         /// </summary>
         /// <param name="depositTerm"></param>
-        /// <returns>Returns the interest of a given deposit (in percents),
+        /// <returns>The interest of a given deposit (in percents),
         /// depending on the length of deposit term.</returns>
         public static decimal GetDepositInterest(int depositTerm)
         {

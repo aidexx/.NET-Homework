@@ -19,7 +19,6 @@ namespace NUnitTests
         public void Get_DepositTermBelowZero_ReturnsArgumentOutOfRangeException()
         {
             Assert.Throws<ArgumentOutOfRangeException>(() => Homework_2.TestClass.GetDepositInterest(-1));
-            Assert.Throws<ArgumentOutOfRangeException>(() => Homework_2.TestClass.GetDepositInterest(-55232));
         }
     }
 }
