@@ -1,4 +1,6 @@
 ﻿using System;
+using SolidCorrectClass;
+using SolidIncorrectClass;
 
 namespace Homework_3
 {
@@ -6,7 +8,8 @@ namespace Homework_3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var p = new SolidIncorrectClass.Child() {Value1 = 1, Value2 = 2};
+
         }
     }
 }
