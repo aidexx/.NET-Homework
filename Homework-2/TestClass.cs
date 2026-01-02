@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.VisualBasic;
 
 namespace Homework_2
 {
@@ -12,24 +13,13 @@ namespace Homework_2
         /// <param name="depositTerm"></param>
         /// <returns>The interest of a given deposit (in percents),
         /// depending on the length of deposit term.</returns>
-        public static decimal GetDepositInterest(int depositTerm)
+        public static decimal GetDepositInterest(int depositTerm) => depositTerm switch
         {
-            if (depositTerm < 0) throw new ArgumentOutOfRangeException($"Term length must be a positive value : {depositTerm}");
-
-            if (depositTerm <= 2)
-            {
-                return 10;
-            }else if (depositTerm <= 5)
-            {
-                return 13.6M;
-            }else if (depositTerm <= 8)
-            {
-                return 16.5M;
-            }
-            else
-            {
-                return 20;
-            }
-        }
+            >= 0 and <= 2 => 10M,
+            >= 3 and <= 5 => 13.6M,
+            >= 6 and <= 8 => 16.5M,
+            > 8 => 20M,
+           _ => throw new ArgumentOutOfRangeException($"depositTerm term must be a positive number : {depositTerm}")
+        };
     }
 }
